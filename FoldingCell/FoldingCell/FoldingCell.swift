@@ -39,7 +39,7 @@ open class FoldingCell: UITableViewCell {
     @IBInspectable open var itemCount: NSInteger = 2
     
     /// The color of the back cell
-    @IBInspectable open var backViewColor: UIColor = UIColor.brown
+    @IBInspectable open var backViewColor: UIColor = UIColor.lightGray
     
     var animationItemViews: [RotatedView]?
     
@@ -270,8 +270,8 @@ open class FoldingCell: UITableViewCell {
         if animated {
             value ? openAnimation(completion) : closeAnimation(completion)
         } else {
-            foregroundView.alpha = value ? 0 : 1
-            containerView.alpha = value ? 1 : 0
+            foregroundView.alpha = value ? 0 : 0.7
+            containerView.alpha = value ? 0.7 : 0
         }
     }
     
